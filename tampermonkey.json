@@ -1,0 +1,18 @@
+{
+    "name": "EdgeBot",
+    "namespace": "https://cactushamster.github.io",
+    "version": "2024-01-19",
+    "author": "HackyRobin",
+    "icon": "https://r23.core.learn.edgenuity.com/Player/images/rebranding-favicons/favicon.ico",
+    "match": "*://*.edgenuity.com/*",
+    "match": "*://*.chat.openai.com/*",
+    "grant": "GM_setValue",
+    "grant": "GM_getValue",
+    "grant": "GM_addValueChangeListener",
+    "grant": "GM_log",
+    "grant": "GM_saveTab",
+    "grant": "GM_getTab",
+    "grant": "GM_openInTab",
+    "grant": "GM_xmlhttpRequest",
+    "grant": "GM_openInTab"
+}
