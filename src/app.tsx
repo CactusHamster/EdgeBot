@@ -28,19 +28,19 @@ async function App (): Promise<HTMLElement> {
     return app_container;
 }
 /* Will need refactoring in future to get rid of debug controls and unnecessary functions. */
-import { attach_brainly_to_app } from "./actions/brainly_answer";
-import { attach_chatgpt_to_app } from "./actions/chatgpt_answer";
+// import { attach_brainly_to_app } from "./actions/brainly_answer";
+// import { attach_chatgpt_to_app } from "./actions/chatgpt_answer";
 import { find_activity_iframe } from "./activities/general";
-import { attach_vocab_to_app_debug } from "./activities/vocabulary";
-import { attach_video_skipper_to_app } from "./actions/skip_video";
-import { ShortAnswer } from "./activities/online_content";
+// import { attach_vocab_to_app_debug } from "./activities/vocabulary";
+// import { attach_video_skipper_to_app } from "./actions/skip_video";
+// import { ShortAnswer } from "./activities/online_content";
 import { ChatGptApiHandler } from "./external/chatgpt/chatgpt";
 import { attach_autocomplete_to_app } from "./actions/autocomplete";
-function attach_writer_to_app_debug (app: HTMLElement, { activity_iframe_agent: agent }: AppContext) {
+/*function attach_writer_to_app_debug (app: HTMLElement, { activity_iframe_agent: agent }: AppContext) {
     if (!agent) throw new Error("Iframe agent required.");
     const btn = app.querySelector("#do-the-textbox") as HTMLButtonElement;
     btn.onclick = async () => ShortAnswer.write_to_textbox(agent, await ShortAnswer.get_question(agent));
-}
+}*/
 /**
  * Attach functionality to App's GUI.
  * @param {HTMLElement} app 
@@ -57,11 +57,11 @@ async function attach_functions_to_app (app: HTMLElement) {
         gpt: new ChatGptApiHandler(),
         app: app,
     }
-    attach_brainly_to_app(app, context);
+    /*attach_brainly_to_app(app, context);
     attach_vocab_to_app_debug(app, context);
     attach_writer_to_app_debug(app, context);
     attach_video_skipper_to_app(app, context);
-    attach_chatgpt_to_app(context);
+    attach_chatgpt_to_app(context);*/
     attach_autocomplete_to_app(context);
 }
 /**
