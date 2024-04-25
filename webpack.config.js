@@ -104,9 +104,9 @@ function tampermonkey_banner(raw_values) {
 
 module.exports = {
   entry: './src/index.ts',
-  // mode: "production",
-  mode: "development",
-  devtool: 'source-map',
+  mode: "production",
+  // mode: "development",
+  // devtool: 'source-map',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
